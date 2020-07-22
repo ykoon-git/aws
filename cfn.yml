@@ -1,0 +1,44 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: |
+  이것은 CloudFormation 테스트용임  
+Parameters:
+  ykVPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 10.10.0.0/16
+      EnableDnsSupport: 'true'
+      EnableDnsHostnames: 'true'
+      InstanceTenancy: default
+      Tags:
+      - Key: Name
+        Value: myVPC
+
+  ykSubnet: 
+    Type: "AWS::EC2::Subnet"
+    Properties: 
+      VpcId: 
+        !Ref ykVPC
+      CidrBlock: 10.0.0.0/24
+      AvailabilityZone: 
+        Fn::Select: 
+          - 0
+          - Fn::GetAZs: ""
+
+Metadata:
+  AWS::CloudFormation::Interface:
+  ParameterGroups:
+    - Label:
+        default: "Network Configuration"
+      Parameters:
+        - ykYVP
+        - ykSubnet
+
+Mappings:
+  
+Conditions:
+  
+Resources:
+  
+Transform:
+  
+Outputs:

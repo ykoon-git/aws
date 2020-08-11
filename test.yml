@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: |
+  
+Parameters:
+  param1:
+    Description: 
+    Type: string
+  param2:
+    Description: 
+    Type: string
+
+Metadata:
+  
+Mappings:
+  
+Conditions:
+  
+Resources:
+  
+Transform:
+  
+Outputs:

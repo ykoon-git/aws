@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: |
-  이것은 CloudFormation 테스트용임  
+  이것은 CloudFormation 테스트용임 뭔가 이상함.
 Parameters:
   DBName:
     Default: wordpressdb
